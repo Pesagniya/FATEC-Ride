@@ -8,25 +8,26 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 ## Requisitos da primeira versão (MVP)
 
- - Usuários podem se cadastrar na plataforma com informações básicas, como nome, e-mail e senha.
- - Usuários cadastrados no sistema passarão por um processo de verificação via e-mail ou telefone.
- - Passageiros podem pesquisar caronas com base em critérios como avaliações, preço, data etc.
- - O motorista publica a carona, descrevendo o trajeto percorrido até o destino no mapa, o número de vagas e o custo por passageiro.
- - Após o processo de geolocalização, o passageiro pode manifestar o seu interesse na carona por meio do ato de reserva, pagando uma taxa pré-definida para o aplicativo.
- - Após a reserva, os envolvidos podem se comunicar via chat para discutir outras informações.
- - Tanto o motorista quanto o passageiro possuem o direito de cancelar sua reserva; no segundo o caso, o custo de reserva é reembolsado pelo aplicativo.
- - Após a conclusão da carona, tanto o passageiro e o motorista podem avaliar a experiência de forma generalizada (1 a 5 estrelas), além de terem a opção de oferecer comentários quanto a cordialidade ou outros atributos.
- - Caronas finalizadas e avaliações serão refletidas no perfil do usuário para referência futura.
-   
+- Usuários podem se cadastrar na plataforma com informações básicas, como nome, e-mail e senha.
+- Usuários cadastrados no sistema passarão por um processo de verificação via e-mail ou telefone.
+- Passageiros podem pesquisar caronas com base em critérios como avaliações, preço, data etc.
+- O motorista publica a carona, descrevendo o trajeto percorrido até o destino no mapa, o número de vagas e o custo por passageiro.
+- Após o processo de geolocalização, o passageiro pode manifestar o seu interesse na carona por meio do ato de reserva, pagando uma taxa pré-definida para o aplicativo.
+- Após a reserva, os envolvidos podem se comunicar via chat para discutir outras informações.
+- Tanto o motorista quanto o passageiro possuem o direito de cancelar sua reserva; no segundo o caso, o custo de reserva é reembolsado pelo aplicativo.
+- Após a conclusão da carona, tanto o passageiro e o motorista podem avaliar a experiência de forma generalizada (1 a 5 estrelas), além de terem a opção de oferecer comentários quanto a cordialidade ou outros atributos.
+- Caronas finalizadas e avaliações serão refletidas no perfil do usuário para referência futura.
+
 ## Observações
 
- - Manutenção das caronas e filtros associados
- - Manutenção de usuários: nome, CPF, telefone, e-mail, sexo e data de nascimento.
- - Compatibilidade com dispositivos móveis Android, responsivo para larguras de tela com 350px ou superior.
- - Filtro:
- - Pagamento:
+- Manutenção das caronas e filtros associados
+- Manutenção de usuários: nome, CPF, telefone, e-mail, sexo e data de nascimento.
+- Compatibilidade com dispositivos móveis Android, responsivo para larguras de tela com 350px ou superior.
+- Filtro:
+- Pagamento:
 
 ## Diagramas
 
 ### Caso de Usos:
-![Casos de Uso](docs/usecases.png)
+
+![Casos de Uso](docs/usecase/usecases.png)

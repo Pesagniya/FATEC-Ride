@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor User as user
+actor Driver as driver
+actor Passenger as passenger
+
+user <|-- driver
+user <|-- passenger
+
+rectangle "App" {
+  
+    usecase "Publicate Ride" as publicateRide
+    usecase "Make Reservation" as interest
+    usecase "Rate Experience" as rateExp
+    usecase "Search Ride" as search
+    usecase "Cancel Ride" as cancel
+    search <.. interest  : <<extend>>
+
+    driver --> publicateRide
+    driver --> rateExp
+    driver --> cancel
+
+    passenger --> rateExp
+    passenger --> search
+    passenger --> cancel
+
+}
+@enduml

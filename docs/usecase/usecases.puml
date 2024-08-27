@@ -15,16 +15,20 @@ rectangle "App" {
     usecase "Make Reservation" as interest
     usecase "Rate Experience" as rateExp
     usecase "Search Ride" as search
-    usecase "Cancel Ride" as cancel
+    usecase "Cancel Trip" as cancel
+    usecase "Register Profile" as register
     search <.. interest  : <<extend>>
 
     driver --> publicateRide
     driver --> rateExp
     driver --> cancel
+    driver --> register
 
+    passenger --> register
     passenger --> rateExp
     passenger --> search
     passenger --> cancel
+
 
 }
 @enduml

@@ -1,34 +1,44 @@
 @startuml
-left to right direction
 skinparam packageStyle rectangle
 
-actor User as user
-actor Driver as driver
-actor Passenger as passenger
+actor Usuário as user
+actor Motorista as driver
+actor Passageiro as passenger
 
 user <|-- driver
 user <|-- passenger
 
 rectangle "App" {
   
-    usecase "Publicate Ride" as publicateRide
-    usecase "Make Reservation" as interest
-    usecase "Rate Experience" as rateExp
-    usecase "Search Ride" as search
-    usecase "Cancel Trip" as cancel
-    usecase "Register Profile" as register
-    search <.. interest  : <<extend>>
+    usecase "Publicar Carona" as publicate
+    usecase "Fazer Reserva" as interest
+    usecase "Avaliar Experiência" as rateExp
+    usecase "Procurar Carona" as search
+    usecase "Cancelar Viagem" as cancel
+    usecase "Registrar Perfil" as register
+    usecase "Login Aplicação" as login
+    usecase "Consultar Chat" as talk
+    usecase "Consultar Reservas" as consult
 
-    driver --> publicateRide
-    driver --> rateExp
-    driver --> cancel
+
+    search <.. interest  : <<extend>>
+    consult <.. cancel  : <<extend>>
+    publicate <.. rateExp  : <<extend>>
+    interest ..> rateExp  : <<include>>
+
+
+    driver --> publicate
     driver --> register
+    driver --> login
+    driver --> talk
+    driver --> consult
+
+
 
     passenger --> register
-    passenger --> rateExp
     passenger --> search
-    passenger --> cancel
-
+    passenger --> talk
+    passenger --> consult
 
 }
 @enduml

@@ -126,7 +126,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 2. O sistema exibe as informações inseridas no UC03 (editar quais informações são modificáveis).
 3. O sistema notifica as partes envolvidas via chat.
   
-**Cancelar Viagem (U08)**
+**Cancelar Viagem (UC08)**
 
 - Ator: Usuário
 - Pré-condição: O motorista ou passageiro está logado e possui uma viagem confirmada.
@@ -139,7 +139,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 - Fluxo alternativo:  
 2. Caso a data estipulada para a carona não exceda 2 horas, o passageiro não é reembolsado pelo cancelamento da carona, e retorna para o passo 3.
 
-**Avaliar Experiência (U09)**
+**Avaliar Experiência (UC09)**
 
 - Ator: Usuário
 - Pré-condição: A viagem foi concluída.

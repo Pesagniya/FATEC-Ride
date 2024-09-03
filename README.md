@@ -36,7 +36,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Registrar Perfil (UC01)**
 
-- Ator: Novo usuário
+- Ator: Novo usuário.
 - Pré-condição: O usuário acessa o aplicativo sem ter um perfil registrado.
 - Pós-condição: O usuário tem um perfil ativo no sistema.
 - Fluxo principal:
@@ -53,7 +53,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Login Aplicação (UC02)**
 
-- Ator: Usuário
+- Ator: Usuário.
 - Pré-condição: O usuário já possui um perfil registrado.
 - Pós-condição: O usuário está logado no sistema e pode acessar suas funcionalidades.
 - Fluxo principal:
@@ -69,7 +69,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Publicar Carona (UC03)**
 
-- Ator: Motorista
+- Ator: Motorista.
 - Pré-condição: O usuário deve estar logado no aplicativo e ter um carro registrado no sistema.
 - Pós-condição: A carona está disponível para ser reservada por passageiros.
 - Fluxo principal:
@@ -81,7 +81,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Procurar Carona (UC04)**
 
-- Ator: Passageiro
+- Ator: Passageiro.
 - Pré-condição: O passageiro está logado no aplicativo.
 - Pós-condição: A carona é exibida com os detalhes necessários para o passageiro fazer uma reserva, juntamente com os detalhes relevantes para a reserva.
 - Fluxo principal:
@@ -97,7 +97,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Fazer Reserva (UC05)**
 
-- Ator: Passageiro
+- Ator: Passageiro.
 - Pré-condição: O passageiro encontrou uma carona disponível que atende as suas preferências.
 - Pós-condição: O passageiro possui uma reserva confirmada na carona selecionada, atualizando o número de passageiros.
 - Fluxo principal:
@@ -108,7 +108,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Consultar Chat (UC06)**
 
-- Ator: Usuário
+- Ator: Usuário.
 - Pré-condição: O usuário está logado e possui caronas em andamento ou reservas confirmadas.
 - Pós-condição: O usuário pode se comunicar com os passageiros.
 - Fluxo principal:
@@ -118,11 +118,17 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Consultar Caronas (UC07)**
 
+- Ator: Usuário.
+- Pré-condição: O usuário está logado no aplicativo.
+- Pós-condição: O usuário visualiza a lista de caronas, podendo verificar suas caronas publicadas ou reservas confirmadas, e obter detalhes adicionais sobre elas.
+- Fluxo Principal:
+1. O usuário acessa a tela de consulta de caronas a partir do menu principal.
+2. O sistema exibe todas as caronas finalizadas ou em andamento associadas ao perfil.
+3. O usuário visualiza o histórico de caronas separadas por mês, tendo a opção de consultar as informações completas de cada viagem.
 
-  
 **Cancelar Viagem (UC08)**
 
-- Ator: Usuário
+- Ator: Usuário.
 - Pré-condição: O motorista ou passageiro está logado e possui uma viagem confirmada.
 - Pós-condição: A viagem é cancelada com sucesso.
 - Fluxo principal:
@@ -135,7 +141,7 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 
 **Avaliar Experiência (UC09)**
 
-- Ator: Usuário
+- Ator: Usuário.
 - Pré-condição: A viagem foi concluída.
 - Pós-condição: A avaliação é registrada no sistema e no perfil dos usuários que receberam avaliações.
 - **Fluxo principal**:

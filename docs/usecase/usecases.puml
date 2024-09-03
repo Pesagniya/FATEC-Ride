@@ -7,37 +7,28 @@ actor Passageiro as passenger
 
 user <|-- driver
 user <|-- passenger
-
-rectangle "App" {
   
-    usecase "Publicar Carona" as publicate
-    usecase "Fazer Reserva" as interest
-    usecase "Avaliar Experiência" as rateExp
-    usecase "Procurar Carona" as search
-    usecase "Cancelar Viagem" as cancel
-    usecase "Registrar Perfil" as register
-    usecase "Login Aplicação" as login
-    usecase "Consultar Chat" as talk
-    usecase "Consultar Caronas" as consult
+usecase "Publicar Carona" as publicate
+usecase "Fazer Reserva" as interest
+usecase "Avaliar Experiência" as rateExp
+usecase "Procurar Carona" as search
+usecase "Cancelar Viagem" as cancel
+usecase "Registrar Perfil" as register
+usecase "Login Aplicação" as login
+usecase "Consultar Chat" as talk
+usecase "Consultar Caronas" as consult
 
+search <.. interest  : <<extend>>
+consult <.. cancel  : <<extend>>
+consult <.. rateExp  : <<extend>>
 
-    search <.. interest  : <<extend>>
-    consult <.. cancel  : <<extend>>
-    consult <.. rateExp  : <<extend>>
+user -> login
+user -> talk
+user -> register
+user -> consult
 
+driver --> publicate
 
-    driver --> publicate
-    driver --> register
-    driver --> login
-    driver --> talk
-    driver --> consult
+passenger --> search
 
-
-
-    passenger --> register
-    passenger --> search
-    passenger --> talk
-    passenger --> consult
-
-}
 @enduml

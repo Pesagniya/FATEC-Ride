@@ -116,15 +116,9 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 2.  O usuário visualiza todas as caronas reservadas ou publicadas, ordenados por atividade.
 3.  O usuário pode enviar e receber mensagens relacionadas a viagem.
 
-**Modificar Carona (UC07)**
+**Consultar Caronas (UC07)**
 
-- Ator: Motorista
-- Pré-condição: O motorista está logado e possui caronas publicadas.
-- Pós-condição: O motorista modificou a sua carona e as partes envolvidas foram notificadas.
-- Fluxo principal:
-1. O motorista acessa a tela de lista de caronas a partir do menu principal.
-2. O sistema exibe as informações inseridas no UC03 (editar quais informações são modificáveis).
-3. O sistema notifica as partes envolvidas via chat.
+
   
 **Cancelar Viagem (UC08)**
 

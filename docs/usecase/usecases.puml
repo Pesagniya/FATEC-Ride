@@ -23,8 +23,7 @@ rectangle "App" {
 
     search <.. interest  : <<extend>>
     consult <.. cancel  : <<extend>>
-    publicate <.. rateExp  : <<extend>>
-    interest ..> rateExp  : <<include>>
+    consult <.. rateExp  : <<extend>>
 
 
     driver --> publicate

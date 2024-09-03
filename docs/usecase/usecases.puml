@@ -18,7 +18,7 @@ rectangle "App" {
     usecase "Registrar Perfil" as register
     usecase "Login Aplicação" as login
     usecase "Consultar Chat" as talk
-    usecase "Consultar Reservas" as consult
+    usecase "Consultar Caronas" as consult
 
 
     search <.. interest  : <<extend>>

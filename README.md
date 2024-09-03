@@ -47,9 +47,9 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
   5.  O usuário fornece informações relevantes para o seu cadastro, incluindo nome, senha, data de nascimento. modelo de carro (opcional), foto de perfil (opcional), documento de identificação (CPF, RG ou CNH) e minibiografia (opcional).
   6.  O sistema valida as informações e cria um perfil para o usuário.
 - Fluxo alternativo:
-- 2. O usuário passa o processo de verificação pelas informações fornecidas pela API do Facebook, e retorna ao passo 3 para as informações restantes.
+  2. O usuário passa o processo de verificação pelas informações fornecidas pela API do Facebook, e retorna ao passo 3 para as informações restantes.
 - Fluxo de exceção:
-- 3. O sistema não permite o cadastro de um usuário que tenha o documento de identificação registrado no banco de dados.
+  3. O sistema não permite o cadastro de um usuário que tenha o documento de identificação registrado no banco de dados.
 
 **Login Aplicação (UC02)**
 
@@ -61,10 +61,10 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
   2.  O sistema autentica o usuário.
   3.  O usuário ganha acesso ao aplicativo.
 - Fluxo alternativo:
-- 1a. O usuário faz o login na aplicação pela API do facebook, e retorna ao passo 2.
+  1a. O usuário faz o login na aplicação pela API do facebook, e retorna ao passo 2.
   1b. O usuário não lembra a senha de perfil e requisita a troca de senha.
   2b. O sistema envia um e-mail contendo instruções para o procedimento.
-  3b. A senha do usuário é redefinida com sucesso, e retorna ao passo 1.
+- 3b. A senha do usuário é redefinida com sucesso, e retorna ao passo 1.
 
 **Publicar Carona (UC03)**:
 
@@ -72,42 +72,54 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 - Pré-condição: O usuário deve estar logado no aplicativo e ter um carro registrado no sistema.
 - Pós-condição: A carona está disponível para ser reservada por passageiros.
 - Fluxo principal:
-  1.  O motorista insere as informações sobre a carona, incluindo data, horário, local de partida, destino, e trajeto.
-  2.  O motorista define o número de vagas disponíveis e o valor estimado por pessoa.
-  3.  O sistema valida os dados inseridos e publica a carona no sistema.
+  1.  O motorista acessa a tela direcionada para oferecer caronas a partir do menu principal.
+  2.  O motorista insere as informações sobre a carona, incluindo data, horário, local de partida, destino, trajeto e filtros (opcional).
+  3.  O motorista define o número de vagas disponíveis e o valor estimado por pessoa.
+  4.  O sistema valida os dados inseridos.
+  5.  A carona é publicada no sistema.
 
 **Procurar Carona (UC04)**:
 
 - Ator: Passageiro
 - Pré-condição: O passageiro está logado no aplicativo.
-- Pós-condição: A carona é exibida com os detalhes necessários para o passageiro fazer uma reserva, juntamente com a foto do motorista e sua avaliação.
+- Pós-condição: A carona é exibida com os detalhes necessários para o passageiro fazer uma reserva, juntamente com os detalhes relevantes para a reserva.
 - Fluxo principal:
-  1.  O passageiro insere os critérios de busca, como origem, destino, data e filtros de preferência (editar).
-  2.  O sistema exibe uma lista de caronas que correspondem aos critérios inseridos.
-  3.  O passageiro seleciona uma carona de interesse.
+  1.  O passageiro acessa a tela de buscar viagens a partir do menu principal.
+  2.  O passageiro informa o ponto de partida e o destino desejado.
+  3.  O sistema exibe uma lista de caronas que correspondem ao trajeto.
+  4.  O passageiro seleciona uma carona de interesse.
+  5.  O sistema exibe informações pertinentes à carona, tais como foto de perfil, placa, modelo do carro, número de assentos restantes e preço por vaga.
+- Fluxo alternativo:
+  3a. O passageiro seleciona filtros na barra de pesquisa para filtrar os resultados (ordenação de preço, data, número de vagas, e filtros personalizados como apenas mulheres).
+  3b. O passageiro não encontra nenhuma carona que atenda o trajeto e desiste do processo.
+  
 
 **Fazer Reserva (UC05)**:
 
 - Pré-condição: O passageiro encontrou uma carona disponível que atende as suas preferências.
 - Pós-condição: O passageiro possui uma reserva confirmada na carona selecionada, atualizando o número de passageiros.
 - **Fluxo principal**:
-  1.  O passageiro seleciona a carona e confirma a reserva.
-  2.  O sistema atualiza a carona com a reserva do passageiro.
+  1.  O passageiro faz a reserva na carona selecionada
+  2.  O sistema confirma a reserva do passageiro. 
+  3.  O sistema atualiza a carona com a reserva do passageiro, atualizando o número de vagas.
+  4.  O sistema abre um link no chat entre o motorista e o passageiro para a discussão de informações mais precisas.
 
 **Consultar Chat (UC06)**:
 
 - Pré-condição: O usuário está logado e possui caronas em andamento ou reservas confirmadas.
 - Pós-condição: O usuário pode se comunicar com os passageiros.
 - Fluxo principal:
-  1.  O usuário acessa a área de chat e visualiza a lista de passageiros associados às suas caronas. (editar)
-  2.  O usuário pode enviar e receber mensagens relacionadas a viagem.
+  1.  O usuário acessa a área de chat a partir do menu principal.
+  2.  O usuário visualiza todas as caronas reservadas ou publicadas, ordenados pela data de reserva.
+  3.  O usuário pode enviar e receber mensagens relacionadas a viagem.
 
-**Consultar Reservas (U07)**:
+**Consultar Reservas (U07) EDITAR (editar carona?)**:
 
-- Pré-condição: O motorista está logado e possui caronas publicadas.
+- Pré-condição: O usuário está logado e possui caronas publicadas.
 - Pós-condição: O motorista pode visualizar e gerenciar as reservas das suas caronas.
 - Fluxo principal: 1. O motorista acessa as reservas associadas às suas caronas. 2. O sistema exibe a lista de passageiros e status de reservas.
-  **Cancelar Viagem (U08)**:
+  
+**Cancelar Viagem (U08)**:
   Pré-condição: O motorista ou passageiro está logado e possui uma viagem confirmada.
   Pós-condição: A viagem é cancelada com sucesso.
   **Fluxo principal**: 1. O usuário acessa a reserva e seleciona a opção de cancelamento. 2. O sistema atualiza o status da viagem para "Cancelada" e notifica o outro usuário.

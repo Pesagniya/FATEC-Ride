@@ -24,7 +24,6 @@ O cliente é cobrado uma taxa para a manutenção de custos operacionais no mome
 - Manutenção de usuários: nome, CPF, telefone, e-mail, sexo e data de nascimento.
 - Compatibilidade com dispositivos móveis Android, responsivo para larguras de tela com 350px ou superior.
 - Filtro:
-- Pagamento:
 
 ## Casos de Uso
 

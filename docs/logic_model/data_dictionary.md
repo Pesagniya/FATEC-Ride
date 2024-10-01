@@ -8,7 +8,7 @@
 | email | Texto | E-mail do usuário | Not Null / Unique |
 | senha | Texto | Senha do usuário | Not Null |
 | role | Caractere | 1 para passageiro (básico), 2 para motorista e 3 para ambos | Not Null |
-| foto | Texto | Foto do usuário | |
+| foto | BLOB | Foto do usuário | |
 
 ___
 
@@ -82,4 +82,4 @@ ___
 | message | Texto | Conteúdo da mensagem enviada | Not Null |
 | timestamp | Data | Data de envio da mensagem | Not Null |
 
-organizar FK reflexivo
+organizar FK

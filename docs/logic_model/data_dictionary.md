@@ -33,7 +33,8 @@ ___
 | modelo | Texto | Modelo do carro | Not Null |
 | ano | Numérico | Ano de fabricação do carro | Not Null |
 | placa | Texto | Placa de Identificação do carro | Not Null / Unique |
-| cor | Texto | Cor do carro | Not Null | fk_Usuario_user_id | Numérico | Referencia tabela Usuario | FK |
+| cor | Texto | Cor do carro | Not Null |
+| fk_Usuario_user_id | Numérico | Referencia tabela Usuario | FK |
 
 ___
 

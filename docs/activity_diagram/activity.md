@@ -71,8 +71,8 @@ endif
 stop  
 @enduml  
 
-| UC06: Consultar Chat |  
-| --- |  
+| UC06: Consultar Chat |
+| --- |
 
 @startuml  
 |Usuário|  
@@ -85,12 +85,12 @@ if (O usuário envia a mensagem) then (Sim)
  :A mensagem é salva pelo sistema;  
 else (Operação Cancelada)  
  stop  
-endif 
+endif  
 stop  
 @enduml  
 
-| UC07: Consultar Caronas |  
-| --- |  
+| UC07: Consultar Caronas |
+| --- |
 
 @startuml  
 |Usuário|  
@@ -101,8 +101,8 @@ start
 stop  
 @enduml  
 
-| UC08: Cancelar Viagem |  
-| --- |  
+| UC08: Cancelar Viagem |
+| --- |
 
 @startuml  
 |Usuário|  

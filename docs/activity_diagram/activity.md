@@ -12,7 +12,7 @@ if () then (Sim)
  :O motorista insere informações pertinentes;  
  :O sistema valida os dados inseridos;  
  if (Dados válidos?) then (Sim)  
-  :A carona é salva no banco de dados e exibida na lista de viagems;  
+  :A carona é salva no banco de dados e exibida na lista de viagens;  
   break  
  else (Não)  
   :Erro: Dados inválidos;  

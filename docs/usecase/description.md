@@ -116,6 +116,7 @@
 3. O usuário insere uma avaliação, entre 1 a 5 estrelas, e feedback (opcional) pertinente a carona.
 4. O sistema registra a avaliação e atualiza a média do recipiente com a nota recebida.
 - Fluxo alternativo:
+1. O usuário envia sua avaliação por meio do pop-up que o aplicativo mostra após a finalização da carona sobre a estimativa de tempo, e retorna ao passo 4.
 
 **Registrar Carro (UC10)**
 - Ator: Motorista.

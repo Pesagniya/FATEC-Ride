@@ -8,7 +8,6 @@ class Usuario {
   -Usuario_TIPO: Char
 
   +register(String, String, String, BLOB): Usuario
-  +validateUser(String): boolean
   +verifyEmail(String): boolean
   +login(String, String): boolean
   +changePwd(String, String): boolean

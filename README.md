@@ -1,6 +1,6 @@
-# Zipps
+# FATEC Ride
 
-O Zipps é um aplicativo de carona sem fins lucrativos que busca conectar passageiros e motoristas na jornada até a FATEC Sorocaba. O objetivo é oferecer um meio para o compartilhamento de viagens, facilitar a procura por pessoas com trajetos coincidentes e pontos de partida próximos da sua localização atual, permitindo a divisão de custos no transporte.
+O FATEC Ride é um aplicativo de carona sem fins lucrativos que busca conectar passageiros e motoristas na jornada até a FATEC Sorocaba. O objetivo é oferecer um meio para o compartilhamento de viagens, facilitar a procura por pessoas com trajetos coincidentes e pontos de partida próximos da sua localização atual, permitindo a divisão de custos no transporte.
 
 Dentre as suas principais funcionalidades, os usuários podem consultar o histórico de caronas e avaliações entre os envolvidos. Ao manifestar interesse em uma publicação, o passageiro ganha acesso ao chat integrado para o esclarecimento de dúvidas e informações adicionais para com o motorista; após a finalização da carona, o sistema de avaliação permite que motoristas e passageiros se avaliem mutuamente. Além disso, o Zipps oferece filtros que possibilitam escolher caronas específicas, como viagens excluvisamente para mulheres ou outras preferências pessoais.
 

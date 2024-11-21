@@ -17,6 +17,7 @@ usecase "Registrar Perfil" as register
 usecase "Login Aplicação" as login
 usecase "Consultar Chat" as talk
 usecase "Consultar Caronas" as consult
+usecase "Registrar Carro" as car
 
 search <.. interest  : <<extend>>
 consult <.. cancel  : <<extend>>
@@ -27,6 +28,7 @@ user -> talk
 user -> register
 user -> consult
 
+driver --> car
 driver --> publicate
 
 passenger --> search
